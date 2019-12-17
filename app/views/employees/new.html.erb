@@ -1,5 +1,7 @@
 <% if flash[:errors] %>
-  <%= flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+  <p><%= error %></p>
+  <% end%>
 <% end %>
 
 <%= form_for @employee do |f| %>
